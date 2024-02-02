@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>장소 예약하기</title>
+    <link rel="stylesheet" href="reservation.css">
 </head>
 <body>
-    <div>예약창~</div>
+    <div class="container">
+        <h1>예약하기</h1>
+        <form action="submit_reservation.php" method="POST">
+            <label for="name">성함:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="number">인원:</label>
+            <input type="number" id="number" name="number" required>
+            <label for="place">장소를 선택하세요:</label>
+            <select id="place" name="place">
+            <option value="room1">Room1</option>
+            <option value="room2">Room2</option>
+            <option value="room3">Room3</option>
+            <option value="room4">Room4</option>
+            <option value="room5">Room5</option>
+            </select>
+            <label for="phone">전화번호:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date">날짜:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">시간:</label>
+            <input type="time" id="time" name="time" required>
+            <input type="submit" value="예약 확정">
+        </form>
+    </div>
 </body>
 </html>

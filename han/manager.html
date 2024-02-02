@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약 확인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .reservation-count {
+            font-size: 72px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 50px;
+        }
+
+        .refresh-btn {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .refresh-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .reservations {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .reservation-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        .reservation-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>총 예약자 수</h1>
+        <div class="reservation-count" id="reservationCount">로딩 중...</div>
+        <!-- <button class="refresh-btn" onclick="refreshCount()">reload</button> -->
+
+        <div class="reservations" id="reservationsSection">
+            <h2>예약 내역</h2>
+            <div class="reservation-item" onclick="refreshCount()"">
+                <p><strong>성함:</strong> 송상현</p>
+                <p><strong>인원:</strong> 3명</p>
+                <p><strong>장소:</strong> ROOM1</p>
+                <p><strong>전화번호:</strong> 010-1111-2222</p>
+                <p><strong>날짜:</strong> 1월 1, 2024</p>
+                <p><strong>시간:</strong> 10:00 AM</p>
+            </div>
+            <div class="reservation-item">
+                <p><strong>성함:</strong> 한지석</p>
+                <p><strong>인원:</strong> 2명</p>
+                <p><strong>장소:</strong> ROOM2</p>
+                <p><strong>전화번호:</strong> 987-654-3210</p>
+                <p><strong>날짜:</strong> 1월 2, 2024</p>
+                <p><strong>시간:</strong> 2:00 PM</p>
+            </div>
+            <!-- Add more reservation items as needed -->
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch reservation count from server
+        function refreshCount() {
+            // Mock data for reservation count
+            const mockReservationCount = 2;
+
+            // Update reservation count display
+            document.getElementById('reservationCount').textContent = mockReservationCount;
+        }
+    </script>
+</body>
+</html>
